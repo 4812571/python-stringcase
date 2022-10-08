@@ -40,7 +40,6 @@ def TestOneInput(data):
         stringcase.alphanumcase(str)
 
 def main():
-    print('main')
     atheris.Setup(sys.argv, TestOneInput)
     atheris.Fuzz()
 
