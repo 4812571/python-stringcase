@@ -1,5 +1,9 @@
 project: thefuzz
 target: ratio
+
+testsuite: 
+    - file://./mayhem/corpus/
+
 cmds:
   - cmd: /python-stringcase/mayhem/convert.py
     libfuzzer: true
