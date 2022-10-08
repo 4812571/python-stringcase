@@ -1,0 +1,5 @@
+project: python-stringcase
+target: convert
+cmds:
+  - cmd: /thefuzz/mayhem/conver.py
+    libfuzzer: true
