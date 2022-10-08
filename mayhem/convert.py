@@ -9,7 +9,7 @@ with atheris.instrument_imports():
 def TestOneInput(data):
     fdp = atheris.FuzzedDataProvider(data)
 
-    num = fdp.ConsumeIntInRange(0, 10)
+    num = fdp.ConsumeIntInRange(0, 14)
     str = fdp.ConsumeString(128)
 
     if num == 0:
@@ -25,18 +25,22 @@ def TestOneInput(data):
     elif num == 5:
         stringcase.pathcase(str)
     elif num == 6:
-        stringcase.sentencecase(str)
+        stringcase.backslashcase(str)
     elif num == 7:
-        stringcase.snakecase(str)
+        stringcase.sentencecase(str)
     elif num == 8:
-        stringcase.spinalcase(str)
+        stringcase.snakecase(str)
     elif num == 9:
-        stringcase.titlecase(str)
+        stringcase.spinalcase(str)
     elif num == 10:
-        stringcase.trimcase(str)
+        stringcase.dotcase(str)
     elif num == 11:
-        stringcase.uppercase(str)
+        stringcase.titlecase(str)
     elif num == 12:
+        stringcase.trimcase(str)
+    elif num == 13:
+        stringcase.uppercase(str)
+    elif num == 14:
         stringcase.alphanumcase(str)
 
 def main():
