@@ -1,5 +1,5 @@
 project: thefuzz
 target: ratio
 cmds:
-  - cmd: /thefuzz/mayhem/ratio.py
+  - cmd: /python-stringcase/mayhem/ratio.py
     libfuzzer: true
