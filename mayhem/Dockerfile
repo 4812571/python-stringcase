@@ -1,10 +1,7 @@
 FROM fuzzers/atheris:2.0.7-python3.9
-
 COPY . /python-stringcase
-
-# Build Project
+RUN apt-get -y update
+RUN apt-get install -y git
 WORKDIR /python-stringcase
 RUN pip install .
-
-# Change Permissions
-RUN chmod +x /thefuzz/mayhem/convert.py
+RUN chmod +x /python-stringcase/mayhem/convert.py
